@@ -1,0 +1,17 @@
+[ui]
+username = Nick Loadholtes nick@ironboundsoftware.com
+verbose= True
+ignore.other = ~/.hgignore
+
+[extdiff]
+cmd.kdiff3 =
+
+[merge-tools]
+kdiff3.args = $base $local $other -o $output
+
+[extensions]
+rebase=
+hgext.extdiff =
+mq =
+hgext.purge=
+
