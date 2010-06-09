@@ -4,3 +4,4 @@ syntax: glob
 *.class
 *.so
 *.o
+*.dll
