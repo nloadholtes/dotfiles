@@ -14,4 +14,5 @@ rebase=
 hgext.extdiff =
 mq =
 hgext.purge=
-
+hgext.bookmarks =
+hggit = 
