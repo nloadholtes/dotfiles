@@ -2,6 +2,7 @@
 username = Nick Loadholtes nick@ironboundsoftware.com
 verbose= True
 ignore.other = ~/.hgignore
+slash = true
 
 [extdiff]
 cmd.kdiff3 =
@@ -16,3 +17,16 @@ mq =
 hgext.purge=
 hgext.bookmarks =
 hggit = 
+
+[color]
+mode = auto
+diff.diffline = bold
+diff.extended = cyan bold
+diff.file_a = red bold
+diff.file_b = green bold
+diff.hunk = magenta
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+diff.trailingwhitespace = bold red_background
+status.unknown = yellow bold
