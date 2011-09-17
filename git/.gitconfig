@@ -1,0 +1,11 @@
+[user]
+	name = Nick Loadholtes
+	email = nick@ironboundsoftware.com
+[color]
+	ui = auto
+[core]
+	editor = vi
+[alias]
+	ci = commit
+	al = log --pretty=oneline --graph --abbrev-commit --decorate
+	st = status
