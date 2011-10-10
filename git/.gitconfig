@@ -10,3 +10,4 @@
 	al = log --pretty=oneline --graph --abbrev-commit --decorate
 	st = status
 	out = log origin/master..HEAD
+	co = checkout
