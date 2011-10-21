@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	editor = vi
+	excludesfile = /home/njl/.gitignore
 [alias]
 	ci = commit
 	al = log --pretty=oneline --graph --abbrev-commit --decorate
