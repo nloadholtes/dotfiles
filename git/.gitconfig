@@ -12,3 +12,4 @@
 	st = status
 	out = log origin/master..HEAD
 	co = checkout
+	branches = branch -a
