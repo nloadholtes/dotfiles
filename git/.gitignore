@@ -1,5 +1,5 @@
 *.pyc
 projectFilesBackup/
-StiffServer.iws
-StiffServer.ipr
-StiffServer.iml
+*.iws
+*.ipr
+*.iml
