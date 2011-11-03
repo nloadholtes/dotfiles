@@ -3,5 +3,6 @@ projectFilesBackup/
 *.iws
 *.ipr
 *.iml
+*.swp
 *.komodoproject
 *.*~
