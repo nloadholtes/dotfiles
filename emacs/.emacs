@@ -1,3 +1,8 @@
+(setq inhibit-splash-screen t)
+(tool-bar-mode 0)
+
+(setq make-backup-files nil)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

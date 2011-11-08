@@ -6,3 +6,5 @@ projectFilesBackup/
 *.swp
 *.komodoproject
 *.*~
+dist/
+temp/
