@@ -1,7 +1,11 @@
 (setq inhibit-splash-screen t)
+
 (tool-bar-mode 0)
 
 (setq make-backup-files nil)
+
+(global-set-key "C-Z" undo)
+
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
