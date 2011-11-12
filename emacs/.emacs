@@ -4,7 +4,7 @@
 
 (setq make-backup-files nil)
 
-(global-set-key "C-Z" undo)
+(global-set-key (kbd "C-z") 'undo)
 
 
 (custom-set-variables
