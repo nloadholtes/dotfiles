@@ -5,7 +5,7 @@
 (setq make-backup-files nil)
 
 (global-set-key (kbd "C-z") 'undo)
-
+(global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
