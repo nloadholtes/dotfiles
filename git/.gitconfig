@@ -3,6 +3,8 @@
 	email = nick@ironboundsoftware.com
 [color]
 	ui = auto
+[color "status"]
+	untracked = red bold
 [core]
 	editor = vi
 	excludesfile = /home/njl/.gitignore
