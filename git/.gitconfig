@@ -15,3 +15,4 @@
 	out = log origin/master..HEAD
 	co = checkout
 	branches = branch -a
+	in = log HEAD..origin/master
