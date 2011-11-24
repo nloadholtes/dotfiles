@@ -12,6 +12,12 @@
           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
           'append)
 
+;; Show trailing whitespaces
+(add-hook 'python-mode-hook (lambda() (setq show-trailing-whitespace t)))
+
+;; y or n only please
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
