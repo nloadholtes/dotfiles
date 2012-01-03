@@ -8,6 +8,11 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 
+(add-to-list 'load-path "~/.emacs.d")
+
+;; Making a better python IDE
+(load-library "py-settings")
+
 ;; Ask for confirmation before quitting Emacs
 (add-hook 'kill-emacs-query-functions
           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
