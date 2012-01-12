@@ -10,9 +10,6 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
-;; Making a better python IDE
-(load-library "py-settings")
-
 ;; Ask for confirmation before quitting Emacs
 (add-hook 'kill-emacs-query-functions
           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
@@ -48,3 +45,13 @@
  '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
  '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green")))))
+
+
+;; Recent files
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+;; Making a better python IDE
+(load-library "py-settings")
