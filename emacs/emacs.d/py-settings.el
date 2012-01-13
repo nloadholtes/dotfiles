@@ -8,6 +8,7 @@
 (require 'lambda-mode)
 (add-hook 'python-mode-hook #'lambda-mode 1)
 (setq lambda-symbol (string (make-char 'greek-iso8859-7 107)))
+(lamba-mode 1)
 
 (autoload 'autopair-global-mode "autopair" nil t)
 (autopair-global-mode)
