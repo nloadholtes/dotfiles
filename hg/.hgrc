@@ -17,6 +17,7 @@ mq =
 hgext.purge=
 hgext.bookmarks =
 hggit = 
+color = 
 
 [color]
 mode = auto
