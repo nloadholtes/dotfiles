@@ -7,6 +7,7 @@
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-<tab>") 'other-window)
 
 (add-to-list 'load-path "~/.emacs.d")
 
