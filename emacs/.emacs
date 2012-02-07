@@ -8,6 +8,7 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
+(global-set-key (kbd "C-x w") 'whitespace-mode)
 
 (add-to-list 'load-path "~/.emacs.d")
 
@@ -16,7 +17,7 @@
           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
           'append)
 
-;; Show trailing whitespaces
+;; Show trailing whitespaces and leading tabs.
 (add-hook 'python-mode-hook (lambda() (setq show-trailing-whitespace t)))
 
 ;; y or n only please
