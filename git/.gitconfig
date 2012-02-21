@@ -16,3 +16,5 @@
 	co = checkout
 	branches = branch -a
 	in = log HEAD..origin/master
+[push]
+	default = current
