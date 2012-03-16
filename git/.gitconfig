@@ -16,5 +16,6 @@
 	co = checkout
 	branches = branch -a
 	in = log HEAD..origin/master
+	forgetabout = update-index --assume-unchanged
 [push]
 	default = current
