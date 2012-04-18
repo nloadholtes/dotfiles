@@ -60,3 +60,6 @@
 
 ;; Making a better python IDE
 (load-library "py-settings")
+
+;; Remember where we were
+(desktop-save-mode 1)
