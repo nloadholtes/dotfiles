@@ -15,9 +15,18 @@ rebase=
 hgext.extdiff =
 mq =
 hgext.purge=
-hgext.bookmarks =
 hggit = 
+hgext.bookmarks =
 color = 
+bookmarks =
+hgext.churn =
+graphlog =
+inotify =
+hgext.convert =
+pager = 
+
+[bookmarks]
+track.current = True
 
 [color]
 mode = auto
@@ -31,3 +40,6 @@ diff.inserted = green
 diff.changed = white
 diff.trailingwhitespace = bold red_background
 status.unknown = yellow bold
+
+[pager]
+pager = LESS='FSRX' less
