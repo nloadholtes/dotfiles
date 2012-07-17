@@ -6,6 +6,7 @@ projectFilesBackup/
 *.swp
 *.komodoproject
 *.*~
+.pythoscope
 dist/
 temp/
 .coverage
