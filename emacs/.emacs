@@ -36,6 +36,7 @@
     (setq buffer-face-mode-face '(:family "Monospace" :height 100))
     (buffer-face-mode))
 (add-hook 'eshell-mode-hook 'my-buffer-face-mode-courrier)
+(add-hook 'compilation-mode-hook 'my-buffer-face-mode-courrier)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
