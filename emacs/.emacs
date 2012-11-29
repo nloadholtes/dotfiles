@@ -9,6 +9,7 @@
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
+(setq x-select-enable-clipboard t)
 
 (add-to-list 'load-path "~/.emacs.d")
 
@@ -71,3 +72,9 @@
 
 ;; Remember where we were
 (desktop-save-mode 1)
+
+;;Handy macro for inserting pdb.set_trace
+(fset 'pdb-insert
+   [return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
+(global-set-key  (kbd "C-x p") 'pdb-insert)
+  
