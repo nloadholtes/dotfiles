@@ -67,9 +67,6 @@
 ;; Column counts please
 (column-number-mode t)
 
-;; Making a better python IDE
-(load-library "py-settings")
-
 ;; Remember where we were
 (desktop-save-mode 1)
 
@@ -92,3 +89,7 @@
 
 ;;el-get controlled things to keep up with
 (el-get-update jedi)
+
+;; Making a better python IDE
+(load-library "py-settings")
+(add-hook 'python-mode-hook 'jedi:ac-setup)
