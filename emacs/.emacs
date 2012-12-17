@@ -44,6 +44,10 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ac-auto-start nil)
+ '(ac-disable-inline t)
+ '(ac-show-menu-immediately-on-auto-complete t)
+ '(ac-trigger-key "C space")
  '(save-place t nil (saveplace))
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -52,6 +56,10 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#222222" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Ubuntu"))))
+ '(ac-candidate-face ((t (:background "lightgray" :foreground "black" :family "Ubuntu Monospace"))))
+ '(ac-candidate-mouse-face ((t (:background "blue" :foreground "white" :family "Ubuntu Monospace"))))
+ '(ac-completion-face ((t (:foreground "darkgray" :underline t :family "Ubuntu Monospace"))))
+ '(ac-selection-face ((t (:background "steelblue" :foreground "white" :family "Ubuntu Monospace"))))
  '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "yellow" :weight bold))))
  '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
@@ -92,4 +100,8 @@
 
 ;; Making a better python IDE
 (load-library "py-settings")
+(global-set-key  (kbd "C-SPC") 'jedi:complete)
+(setq auto-complete-mode t)
 
+;;Hack to make sure the auto complete doesn't screw things over.
+(set-cursor-color "white")
