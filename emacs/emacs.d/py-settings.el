@@ -30,4 +30,4 @@
               "~/projects/github/yasnippet")
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas/global-mode 1)
-
+(add-hook 'python-mode-hook 'jedi:ac-setup)
