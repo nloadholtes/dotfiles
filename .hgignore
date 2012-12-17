@@ -1,2 +1,4 @@
 emacs/emacs.d/auto-save-list
 emacs/emacs.d/session.*
+emacs/emacs.d/el-get
+emacs/emacs.d/ac-comphist.dat
