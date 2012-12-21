@@ -2,6 +2,9 @@ mkdir ~/projects
 mkdir ~/projects/bitbucket
 mkdir ~/projects/github
  
+cd ~/projects/bitbucket
+hg clone ssh://hg@bitbucket.org/nloadholtes/dotfiles
+
 cd
 ln -s projects/bitbucket/dotfiles/hg/.hgrc .hgrc
 ln -s projects/bitbucket/dotfiles/hg/.hgignore .hgignore
