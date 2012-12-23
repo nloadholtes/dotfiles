@@ -16,11 +16,17 @@ ln -s projects/bitbucket/dotfiles/unix/.pylintrc .pylintrc
 ln -s projects/bitbucket/dotfiles/unix/alias .bash_aliases
 
 # pip
-#virtualenv
+pip install virtualenvwrapper
+pip install pylint
 #pylint
 
-echo "PATH=$PATH:~/projects/github/shellGrease:" >> ~/.bashrc
-echo "[[ $- == *i* ]]   &&   . ~/projects/github/git-prompt/git-prompt.sh" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "#Added by dotfiles/install.sh" >> ~/.bashrc
+echo "#" >> ~/.bashrc
+echo "PATH=\$PATH:~/projects/github/shellGrease:" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "[[ \$- == *i* ]]   &&   . ~/projects/github/git-prompt/git-prompt.sh" >> ~/.bashrc
+echo "" >> ~/.bashrc
 echo "export WORKON_HOME=~/Envs" >> ~/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 
