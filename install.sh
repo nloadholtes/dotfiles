@@ -18,7 +18,8 @@ ln -s projects/bitbucket/dotfiles/unix/alias .bash_aliases
 # pip
 pip install virtualenvwrapper
 pip install pylint
-#pylint
+pip install coverage
+pip install nose
 
 echo "" >> ~/.bashrc
 echo "#Added by dotfiles/install.sh" >> ~/.bashrc
