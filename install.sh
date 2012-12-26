@@ -30,6 +30,11 @@ echo "[[ \$- == *i* ]]   &&   . ~/projects/github/git-prompt/git-prompt.sh" >> ~
 echo "" >> ~/.bashrc
 echo "export WORKON_HOME=~/Envs" >> ~/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "export HISTSIZE=1000000" >> ~/.bashrc
+echo "export HISTFILESIZE=1000000" >> ~/.bashrc
+echo "shopt -s histappend" >> ~/.bashrc
+
 
 #Things to git
 cd ~/projects/github
