@@ -15,6 +15,8 @@ ln -s projects/bitbucket/dotfiles/emacs/emacs.d/ .emacs.d
 ln -s projects/bitbucket/dotfiles/unix/.pylintrc .pylintrc
 ln -s projects/bitbucket/dotfiles/unix/alias .bash_aliases
 
+#install libcurl4-openssl-dev for git stuff
+
 # pip
 pip install virtualenvwrapper
 pip install pylint

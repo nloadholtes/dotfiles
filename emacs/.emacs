@@ -11,7 +11,7 @@
 (global-set-key (kbd "C-x w") 'whitespace-mode)
 (setq x-select-enable-clipboard t)
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/")
 
 ;; Ask for confirmation before quitting Emacs
 (add-hook 'kill-emacs-query-functions
@@ -84,7 +84,7 @@
   
 
 ;;el-get, an awseome apt-get like manager
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get/")
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -96,7 +96,7 @@
 
 
 ;;el-get controlled things to keep up with
-;;(el-get-update jedi)
+;; (el-get-update jedi)
 
 ;; Making a better python IDE
 (load-library "py-settings")
