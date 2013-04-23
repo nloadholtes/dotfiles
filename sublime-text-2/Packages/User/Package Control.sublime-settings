@@ -1,0 +1,8 @@
+{
+	"installed_packages":
+	[
+		"Package Control",
+		"SublimeCodeIntel",
+		"SublimeLinter"
+	]
+}
