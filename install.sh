@@ -19,10 +19,10 @@ ln -s projects/bitbucket/dotfiles/sublime-text-2/Packages/User .config/sublime-t
 #install libcurl4-openssl-dev for git stuff
 
 # pip
-pip install virtualenvwrapper
-pip install pylint
-pip install coverage
-pip install nose
+sudo pip install virtualenvwrapper
+sudo pip install pylint
+sudo pip install coverage
+sudo pip install nose
 
 echo "" >> ~/.bashrc
 echo "#Added by dotfiles/install.sh" >> ~/.bashrc
