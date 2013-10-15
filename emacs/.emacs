@@ -47,6 +47,7 @@
  '(ac-auto-start nil)
  '(ac-disable-inline t)
  '(ac-show-menu-immediately-on-auto-complete t)
+ '(column-number-mode t)
  '(save-place t nil (saveplace))
  '(tool-bar-mode nil))
 (custom-set-faces

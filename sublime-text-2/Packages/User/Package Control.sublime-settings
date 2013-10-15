@@ -1,8 +1,13 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Gist",
 		"Package Control",
+		"Python Flake8 Lint",
+		"Python Imports Sorter",
 		"SublimeCodeIntel",
-		"SublimeLinter"
+		"SublimeLinter",
+		"Unicode Character Highlighter"
 	]
 }
