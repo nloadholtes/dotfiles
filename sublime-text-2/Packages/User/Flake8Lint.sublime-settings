@@ -43,7 +43,10 @@
     // select errors and warnings (e.g. ["E", "W6"])
     "select": [],
     // skip errors and warnings (e.g. ["E303", E4", "W"])
-    "ignore": [],
+    //E128 - underindented continued line
+    //E262 - 2 spaces before inline comment
+    // E261 - 1 space after inline comment
+    "ignore": ["E128", "E262", "E261"],
 
     // files to ignore, for example: ["*.mako", "test*.py"]
     "ignore_files": []

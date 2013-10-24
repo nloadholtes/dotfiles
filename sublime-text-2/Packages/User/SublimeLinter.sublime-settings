@@ -45,7 +45,7 @@
     */
     "sublimelinter_syntax_map":
     {
-        "Python Django": "python",
+        // "Python Django": "python",
         "Ruby on Rails": "ruby",
         "C++": "c"
     },
@@ -167,7 +167,7 @@
     },
 
     // Set this to false to turn pep8 checking off completely
-    "pep8": true,
+    "pep8": false,
 
     /*
         A list of pep8 error numbers to ignore. By default "line too long" errors are ignored.
