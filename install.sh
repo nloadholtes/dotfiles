@@ -1,6 +1,7 @@
 mkdir ~/projects
 mkdir ~/projects/bitbucket
 mkdir ~/projects/github
+mkdir ~/bin
  
 cd ~/projects/bitbucket
 hg clone ssh://hg@bitbucket.org/nloadholtes/dotfiles
