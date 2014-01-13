@@ -1,0 +1,9 @@
+{
+	"installed_packages":
+	[
+		"Python Flake8 Lint",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeLinter-pep8"
+	]
+}
