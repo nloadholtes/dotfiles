@@ -3,7 +3,7 @@
     "lint_on_save": true,
 
     // run flake8 lint on file loading
-    "lint_on_load": false,
+    "lint_on_load": true,
 
     // popup a dialog of detected conditions?
     "popup": false,
@@ -35,7 +35,7 @@
     // turn on pep8 error lint
     "pep8": true,
     // turn off complexity check (set number > 0 to check complexity level)
-    "complexity": -1,
+    "complexity": 20,
 
     // set desired max line length
     "pep8_max_line_length": 110,

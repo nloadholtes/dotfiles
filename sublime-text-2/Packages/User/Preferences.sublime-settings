@@ -3,7 +3,9 @@
 	"font_size": 10,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Gist",
+		"SublimeLinter"
 	],
 	"save_on_focus_lost": true,
 	"translate_tabs_to_spaces": true
