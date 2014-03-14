@@ -1,11 +1,12 @@
 {
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"font_size": 10,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Python Flake8 Lint",
 		"Vintage"
 	],
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"translate_tabs_to_spaces": true
 }
