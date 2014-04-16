@@ -11,6 +11,7 @@
 [alias]
 	ci = commit
 	al = log --pretty=oneline --graph --abbrev-commit --decorate
+	all = log --pretty=oneline --graph --abbrev-commit --decorate --all
 	st = status
 	out = log origin/master..HEAD
 	co = checkout
@@ -21,3 +22,7 @@
 	undo = reset --soft HEAD~1
 [push]
 	default = current
+[init]
+        templatedir = ~/.git_template
+[branch]
+        autosetuprebase = always
