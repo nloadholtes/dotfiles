@@ -10,8 +10,10 @@
 	excludesfile = ~/.gitignore
 [alias]
 	ci = commit
-	al = log --pretty=oneline --graph --abbrev-commit --decorate
-	all = log --pretty=oneline --graph --abbrev-commit --decorate --all
+	al = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
+#log --pretty=oneline --graph --abbrev-commit --decorate
+	all = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --all
+#log --pretty=oneline --graph --abbrev-commit --decorate --all
 	st = status
 	out = log origin/master..HEAD
 	co = checkout
