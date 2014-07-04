@@ -1,8 +1,8 @@
 ;;
 ;; A python specific settings file.
 ;;
-(add-to-list 'load-path "~/.emacs.d/python-mode.el-6.0.4") 
-(setq py-install-directory "~/.emacs.d/python-mode.el-6.0.4")
+(add-to-list 'load-path "~/.emacs.d/python-mode.el-6.1.3") 
+(setq py-install-directory "~/.emacs.d/python-mode.el-6.1.3")
 (require 'python-mode)
 
 (require 'lambda-mode)
@@ -24,10 +24,10 @@
                           #'autopair-python-triple-quote-action))))
 
 (require 'python-pep8)
-(require 'python-pylint)
+;;(require 'python-pylint)
 
 (add-to-list 'load-path
               "~/projects/github/yasnippet")
-(require 'yasnippet) ;; not yasnippet-bundle
-(yas/global-mode 1)
+;(require 'yasnippet) ;; not yasnippet-bundle
+;(yas/global-mode 1)
 (add-hook 'python-mode-hook 'jedi:ac-setup)

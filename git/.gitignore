@@ -11,4 +11,5 @@ dist/
 temp/
 .coverage
 htmlcov/
+commit_images
 .DS_Store

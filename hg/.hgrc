@@ -1,5 +1,5 @@
 [ui]
-username = Nick Loadholtes nick@ironboundsoftware.com
+username = Nick Loadholtes <nick@ironboundsoftware.com>
 verbose= True
 ignore.other = ~/.hgignore
 slash = true

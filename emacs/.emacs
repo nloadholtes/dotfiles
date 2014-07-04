@@ -1,7 +1,7 @@
 
 (setq inhibit-splash-screen t)
 
-(tool-bar-mode 0)
+;(tool-bar-mode 0)
 
 (setq make-backup-files nil)
 
@@ -19,7 +19,12 @@
           'append)
 
 ;; Show trailing whitespaces and leading tabs.
-(add-hook 'python-mode-hook (lambda() (setq show-trailing-whitespace t)))
+;; Whitespace mode.
+(require 'whitespace)
+;(setq whitespace-style
+;  '(lines-tail tabs tab-mark trailing))
+(setq show-trailing-whitespace t)
+;(add-hook 'python-mode-hook (lambda() (setq show-trailing-whitespace t)))
 
 ;; y or n only please
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -99,6 +104,15 @@
 ;;el-get controlled things to keep up with
 ;; (el-get-update jedi)
 
+(when (memq window-system '(mac ns))
+  (setq exec-path (append exec-path '("/usr/local/bin")))
+  ;;; I prefer cmd key for meta
+  (setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none))
+
+
 ;; Making a better python IDE
 (load-library "py-settings")
 (global-set-key  (kbd "C-SPC") 'jedi:complete)
@@ -106,3 +120,16 @@
 
 ;;Hack to make sure the auto complete doesn't screw things over.
 (set-cursor-color "white")
+
+
+
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(setq flycheck-flake8rc "~/.config/flake8")
+
+
+;;; .emacs ends here

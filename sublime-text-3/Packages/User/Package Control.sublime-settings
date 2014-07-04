@@ -1,6 +1,11 @@
 {
 	"installed_packages":
 	[
+		"Better CoffeeScript",
+		"Gist",
+		"Git",
+		"GitGutter",
+		"INI",
 		"Python Flake8 Lint",
 		"SublimeLinter",
 		"SublimeLinter-flake8",
