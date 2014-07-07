@@ -60,7 +60,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#222222" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Ubuntu"))))
+ '(default ((t (:inherit nil :stipple nil :background "#222222" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "unknown" :family "Ubuntu"))))
  '(ac-candidate-face ((t (:background "lightgray" :foreground "black" :family "Ubuntu Monospace"))))
  '(ac-candidate-mouse-face ((t (:background "blue" :foreground "white" :family "Ubuntu Monospace"))))
  '(ac-completion-face ((t (:foreground "darkgray" :underline t :family "Ubuntu Monospace"))))
@@ -114,6 +114,7 @@
 
 
 ;; Making a better python IDE
+(setq-default indent-tabs-mode nil)
 (load-library "py-settings")
 (global-set-key  (kbd "C-SPC") 'jedi:complete)
 (setq auto-complete-mode t)
