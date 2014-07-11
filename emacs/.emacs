@@ -22,6 +22,7 @@
 (global-set-key (kbd "C-<insert>") 'clipboard-kill-ring-save)
 (global-set-key (kbd "<shift>-<insert>") ' clipboard-yank)
 (global-set-key (kbd "<shift>-<delete>") 'clipboard-kill-region)
+(global-set-key (kbd "C-<end>") 'end-of-buffer)
 (setq x-select-enable-clipboard t)
 
 ;;; Are we on a Mac? Lets resotre some sanity
@@ -103,9 +104,9 @@
 
 ;;Handy macro for inserting pdb.set_trace
 (fset 'pdb-insert
-   [return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
+   [return ?i ?m ?p ?o ?r ?t ?  ?i  ?p ?d ?b ?\; ?  ?i ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
 (global-set-key  (kbd "C-x p") 'pdb-insert)
-  
+
 
 ;;el-get, an awseome apt-get like manager
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get/")
