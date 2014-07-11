@@ -1,17 +1,37 @@
+;;; Nick's .emacs file.
+;;; 
+;;; THIS IS MY .EMACS FILE. THERE ARE MANY LIKE IT. THIS ONE IS MINE.
+;;;
+;;; Code:
 
+;;; emacs basics
 (setq inhibit-splash-screen t)
-
+(setq make-backup-files nil)
+(add-to-list 'load-path "~/.emacs.d/")
 ;(tool-bar-mode 0)
 
-(setq make-backup-files nil)
+;; y or n only please
+(fset 'yes-or-no-p 'y-or-n-p)
 
+;;; key bindings
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
+;;; These are not working... 
+(global-set-key (kbd "C-<insert>") 'clipboard-kill-ring-save)
+(global-set-key (kbd "<shift>-<insert>") ' clipboard-yank)
+(global-set-key (kbd "<shift>-<delete>") 'clipboard-kill-region)
 (setq x-select-enable-clipboard t)
 
-(add-to-list 'load-path "~/.emacs.d/")
+;;; Are we on a Mac? Lets resotre some sanity
+(when (memq window-system '(mac ns))
+  (setq exec-path (append exec-path '("/usr/local/bin")))
+  ;;; I prefer cmd key for meta
+  (setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none))
 
 ;; Ask for confirmation before quitting Emacs
 (add-hook 'kill-emacs-query-functions
@@ -26,8 +46,6 @@
 (setq show-trailing-whitespace t)
 ;(add-hook 'python-mode-hook (lambda() (setq show-trailing-whitespace t)))
 
-;; y or n only please
-(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; org mode looks interesting
 (require 'org-install)
@@ -91,7 +109,6 @@
 
 ;;el-get, an awseome apt-get like manager
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get/")
-
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -104,27 +121,22 @@
 ;;el-get controlled things to keep up with
 ;; (el-get-update jedi)
 
-(when (memq window-system '(mac ns))
-  (setq exec-path (append exec-path '("/usr/local/bin")))
-  ;;; I prefer cmd key for meta
-  (setq mac-option-key-is-meta nil
-      mac-command-key-is-meta t
-      mac-command-modifier 'meta
-      mac-option-modifier 'none))
-
 
 ;; Making a better python IDE
-(setq-default indent-tabs-mode nil)
-(load-library "py-settings")
+(load "py-settings")
 (global-set-key  (kbd "C-SPC") 'jedi:complete)
 (setq auto-complete-mode t)
+
 
 ;;Hack to make sure the auto complete doesn't screw things over.
 (set-cursor-color "white")
 
 
+;;; tab sanity
+(load "tabs")
 
 
+;;; cleanliness is a must
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -133,4 +145,13 @@
 (setq flycheck-flake8rc "~/.config/flake8")
 
 
-;;; .emacs ends here
+;;; git gutter is a lifesaver
+(setq git-gutter+-mode t)
+
+
+;;; Awesome completion tool
+(ido-mode t)
+(setq ido-enable-flex-matching t) ; fuzzy matching is a must have
+
+
+;;; .Emacs ends here
