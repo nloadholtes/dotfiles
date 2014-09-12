@@ -24,8 +24,9 @@
 (global-set-key (kbd "<shift>-<delete>") 'clipboard-kill-region)
 (global-set-key (kbd "C-<end>") 'end-of-buffer)
 (setq x-select-enable-clipboard t)
+(global-unset-key (kbd "s-q"))
 
-;;; Are we on a Mac? Lets resotre some sanity
+;;; Are we on a Mac? Lets restore some sanity
 (when (memq window-system '(mac ns))
   (setq exec-path (append exec-path '("/usr/local/bin")))
   ;;; I prefer cmd key for meta
