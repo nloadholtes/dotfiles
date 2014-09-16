@@ -138,6 +138,9 @@
 (load "tabs")
 
 
+;;; Show the file path in the title of the frame
+(setq-default frame-title-format "%b (%f)")
+
 ;;; cleanliness is a must
 (require 'package)
 (add-to-list 'package-archives
