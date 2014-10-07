@@ -18,13 +18,15 @@
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
-;;; These are not working... 
+;;; These are not working...
 (global-set-key (kbd "C-<insert>") 'clipboard-kill-ring-save)
 (global-set-key (kbd "<shift>-<insert>") ' clipboard-yank)
 (global-set-key (kbd "<shift>-<delete>") 'clipboard-kill-region)
 (global-set-key (kbd "C-<end>") 'end-of-buffer)
 (setq x-select-enable-clipboard t)
+;;; The next two prevent accidental closings on the mac
 (global-unset-key (kbd "s-q"))
+;(global-unset-key (kbd "s-w"))
 
 ;;; Are we on a Mac? Lets restore some sanity
 (when (memq window-system '(mac ns))
