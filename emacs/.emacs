@@ -135,6 +135,11 @@
 ;;Hack to make sure the auto complete doesn't screw things over.
 (set-cursor-color "white")
 
+;;yaml support
+(load "yaml-mode")
+;(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
 
 ;;; tab sanity
 (load "tabs")
