@@ -26,7 +26,7 @@
 (setq x-select-enable-clipboard t)
 ;;; The next two prevent accidental closings on the mac
 (global-unset-key (kbd "s-q"))
-;(global-unset-key (kbd "s-w"))
+(global-unset-key (kbd "s-w"))
 
 ;;; Are we on a Mac? Lets restore some sanity
 (when (memq window-system '(mac ns))
