@@ -127,6 +127,7 @@
 
 
 ;; Making a better python IDE
+(add-to-list 'load-path "~/.emacs.d")
 (load "py-settings")
 (global-set-key  (kbd "C-SPC") 'jedi:complete)
 (setq auto-complete-mode t)
