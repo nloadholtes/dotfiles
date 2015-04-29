@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+# Take a picture
+~/bin/take_a_picture.sh &
