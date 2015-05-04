@@ -1,4 +1,4 @@
 #!/bin/sh
 #
 # Take a picture
-~/bin/take_picture.sh &
+~/projects/github/shellGrease/take_picture.sh &
