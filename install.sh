@@ -17,7 +17,7 @@ ln -s projects/bitbucket/dotfiles/emacs/emacs.d/ .emacs.d
 ln -s projects/bitbucket/dotfiles/unix/.pylintrc .pylintrc
 ln -s projects/bitbucket/dotfiles/unix/alias .bash_aliases
 ln -s projects/bitbucket/dotfiles/sublime-text-2/Packages/User .config/sublime-text-2/Packages/User
-ln -s projects/bitbucket/dotfiles/git/pre-commit .git_template/pre-commit
+ln -s projects/bitbucket/dotfiles/git/pre-commit .git_template/post-commit
 
 #install libcurl4-openssl-dev for git stuff
 
