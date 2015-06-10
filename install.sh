@@ -2,7 +2,7 @@ mkdir ~/projects
 mkdir ~/projects/bitbucket
 mkdir ~/projects/github
 mkdir ~/bin
-mkdir ~/.git_template
+mkdir -p ~/.git_template/hooks
  
 cd ~/projects/bitbucket
 hg clone ssh://hg@bitbucket.org/nloadholtes/dotfiles
@@ -17,7 +17,7 @@ ln -s projects/bitbucket/dotfiles/emacs/emacs.d/ .emacs.d
 ln -s projects/bitbucket/dotfiles/unix/.pylintrc .pylintrc
 ln -s projects/bitbucket/dotfiles/unix/alias .bash_aliases
 ln -s projects/bitbucket/dotfiles/sublime-text-2/Packages/User .config/sublime-text-2/Packages/User
-ln -s projects/bitbucket/dotfiles/git/pre-commit .git_template/post-commit
+ln -s projects/bitbucket/dotfiles/git/pre-commit .git_template/hooks/post-commit
 
 #install libcurl4-openssl-dev for git stuff
 
