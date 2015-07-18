@@ -8,7 +8,7 @@
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore
-	pager = $(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight | less
+#	pager = $(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight | less
 [alias]
 	ci = commit
 	al = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
