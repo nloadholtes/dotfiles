@@ -14,3 +14,4 @@ htmlcov/
 commit_images
 .DS_Store
 .idea/
+.env
