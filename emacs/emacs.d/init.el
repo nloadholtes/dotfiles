@@ -22,7 +22,8 @@
     elpy
     flycheck
     material-theme
-    py-autopep8))
+    py-autopep8
+    geeknote))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
@@ -74,8 +75,15 @@
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
 
+;; Evernote/geeknote keys
+(global-set-key (kbd "C-c g c") 'geeknote-create)
+(global-set-key (kbd "C-c g e") 'geeknote-edit)
+(global-set-key (kbd "C-c g f") 'geeknote-find)
+(global-set-key (kbd "C-c g s") 'geeknote-show)
+(global-set-key (kbd "C-c g r") 'geeknote-remove)
+(global-set-key (kbd "C-c g m") 'geeknote-move)
+
 ;; Column counts please
 (column-number-mode t)
-
 
 ;; init.el ends here
