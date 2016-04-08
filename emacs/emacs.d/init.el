@@ -23,7 +23,8 @@
     flycheck
     material-theme
     py-autopep8
-    geeknote))
+    geeknote
+    markdown-mode))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
