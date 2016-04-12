@@ -87,4 +87,12 @@
 ;; Column counts please
 (column-number-mode t)
 
+;; Set a "different" default face for the eshell
+(defun my-buffer-face-mode-courrier ()
+    (interactive)
+    (setq buffer-face-mode-face '(:family "Monospace" :height 100))
+    (buffer-face-mode))
+(add-hook 'eshell-mode-hook 'my-buffer-face-mode-courrier)
+(add-hook 'shell-mode-hook 'my-buffer-face-mode-courrier)
+
 ;; init.el ends here
