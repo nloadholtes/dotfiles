@@ -95,4 +95,7 @@
 (add-hook 'eshell-mode-hook 'my-buffer-face-mode-courrier)
 (add-hook 'shell-mode-hook 'my-buffer-face-mode-courrier)
 
+;; Server mode so we can be a fast editor
+(server-mode t)
+
 ;; init.el ends here
