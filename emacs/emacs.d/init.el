@@ -87,6 +87,9 @@
 ;; Column counts please
 (column-number-mode t)
 
+;; Indent things nicely, we are not savages
+(electric-indent-mode 1)
+
 ;; Set a "different" default face for the eshell
 (defun my-buffer-face-mode-courrier ()
     (interactive)
