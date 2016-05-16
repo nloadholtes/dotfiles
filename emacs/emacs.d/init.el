@@ -90,6 +90,11 @@
 ;; Indent things nicely, we are not savages
 (electric-indent-mode 1)
 
+;; Helper for python code
+(fset 'pdb-insert
+   [return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
+(global-set-key  (kbd "C-x p") 'pdb-insert)
+
 ;; Set a "different" default face for the eshell
 (defun my-buffer-face-mode-courrier ()
     (interactive)
