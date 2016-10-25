@@ -57,18 +57,15 @@
 
 ;; colors and keys
 (custom-set-faces
- '(font-lock-comment-face ((((class color) 
-                             (min-colors 88) 
-                             (background dark)) 
-                            (:foreground "yellow" :weight bold))))
- '(font-lock-function-name-face ((((class color) 
-                                   (min-colors 88) 
-                                   (background dark)) 
-                                  (:foreground "SkyBlue"))))
- '(font-lock-keyword-face ((((class color) 
-                             (min-colors 88) 
-                             (background dark)) 
-                            (:foreground "Cyan" :weight bold))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
+ '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "yellow" :weight bold))))
+ '(font-lock-doc-face ((t (:foreground "medium spring green"))))
+ '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
+ '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
  '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green")))))
 
 (global-set-key (kbd "C-z") 'undo)
@@ -92,7 +89,7 @@
 
 ;; Helper for python code
 (fset 'pdb-insert
-   [return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
+   [?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
 (global-set-key  (kbd "C-x p") 'pdb-insert)
 
 ;; Set a "different" default face for the eshell
@@ -107,3 +104,11 @@
 (server-mode t)
 
 ;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode git-gutter geeknote flycheck elpy ein better-defaults))))

@@ -16,3 +16,4 @@ commit_images
 .idea/
 .env
 .cache
+dash2.0/client/node_modules
