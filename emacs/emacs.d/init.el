@@ -78,7 +78,7 @@
 (global-set-key (kbd "C-c g e") 'geeknote-edit)
 (global-set-key (kbd "C-c g f") 'geeknote-find)
 (global-set-key (kbd "C-c g s") 'geeknote-show)
-(global-set-key (kbd "C-c g r") 'geeknote-remove)
+;; (global-set-key (kbd "C-c g r") 'geeknote-remove) ;; OMG why did I ever put this here
 (global-set-key (kbd "C-c g m") 'geeknote-move)
 
 ;; Column counts please
@@ -111,4 +111,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode git-gutter geeknote flycheck elpy ein better-defaults))))
+    (pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode git-gutter geeknote flycheck elpy ein better-defaults))))
