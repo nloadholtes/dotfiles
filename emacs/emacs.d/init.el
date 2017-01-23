@@ -86,6 +86,7 @@
 
 ;; Indent things nicely, we are not savages
 (electric-indent-mode 1)
+(electric-pair-mode 1)
 
 ;; Helper for python code
 (fset 'pdb-insert
@@ -111,4 +112,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode git-gutter geeknote flycheck elpy ein better-defaults))))
+    (yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode git-gutter geeknote flycheck elpy ein better-defaults))))
