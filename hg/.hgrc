@@ -1,7 +1,7 @@
 [ui]
 username = Nick Loadholtes <nick@ironboundsoftware.com>
 verbose= True
-ignore.other = ~/.hgignore
+ignore = ~/.hgignore
 slash = true
 
 [extdiff]

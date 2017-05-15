@@ -24,6 +24,7 @@
 --ignore-directory=is:.metadata
 --ignore-directory=is:htmlcov
 --ignore-directory=is:.idea
+--ignore-directory=is:tmp
 --ignore-file=ext:bak
 --ignore-file=match:/~$/
 --ignore-file=match:/^#.+#$/
