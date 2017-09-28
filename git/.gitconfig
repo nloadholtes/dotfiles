@@ -8,7 +8,7 @@
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore
-	pager = diff-highlight | less
+	#pager = diff-highlight | less
 [alias]
 	ci = commit
 	al = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
@@ -31,3 +31,7 @@
 	autosetuprebase = always
 [merge]
 	tool = kdiff3
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
