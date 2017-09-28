@@ -66,7 +66,9 @@
  '(font-lock-doc-face ((t (:foreground "medium spring green"))))
  '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
- '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green")))))
+ '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green"))))
+ '(menu ((t (:inverse-video nil :strike-through nil :underline nil :height 2.0 :family "SFNS Display"))))
+ '(mode-line ((t (:background "#1c1f26" :foreground "#ffffff" :family "SFNS Displau")))))
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
