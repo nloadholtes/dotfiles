@@ -17,3 +17,4 @@ commit_images
 .env
 .cache
 dash2.0/client/node_modules
+package-lock.json
