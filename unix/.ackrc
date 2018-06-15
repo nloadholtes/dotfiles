@@ -25,6 +25,9 @@
 --ignore-directory=is:htmlcov
 --ignore-directory=is:.idea
 --ignore-directory=is:tmp
+--ignore-directory=is:.tox
+--ignore-directory=is:.venv
+--ignore-directory=match:/^logs/
 --ignore-file=ext:bak
 --ignore-file=match:/~$/
 --ignore-file=match:/^#.+#$/
@@ -35,8 +38,10 @@
 --ignore-file=match:/[.]min[.]css$/
 --ignore-file=match:/[.]css[.]min$/
 --ignore-file=match:.coverage
+--ignore-file=match:nosetests.xml
 --ignore-file=ext:pdf
 --ignore-file=ext:gif,jpg,jpeg,png
+--ignore-file=ext:map
 --type-add=perl:ext:pl,pm,pod,t,psgi
 --type-add=perl:firstlinematch:/^#!.*\bperl/
 --type-add=perltest:ext:t
@@ -89,6 +94,7 @@
 --type-add=php:firstlinematch:/^#!.*\bphp/
 --type-add=plone:ext:pt,cpt,metadata,cpy,py
 --type-add=python:ext:py
+--type-add=py:ext:py
 --type-add=python:firstlinematch:/^#!.*\bpython/
 --type-add=rr:ext:R
 --type-add=ruby:ext:rb,rhtml,rjs,rxml,erb,rake,spec

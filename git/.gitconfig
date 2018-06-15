@@ -8,7 +8,7 @@
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore
-	#pager = diff-highlight | less
+	pager = /usr/local/Cellar/git/2.17.1/share/git-core/contrib/diff-highlight/diff-highlight | less -r
 [alias]
 	ci = commit
 	al = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
@@ -32,6 +32,6 @@
 [merge]
 	tool = kdiff3
 [pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+	#log = diff-highlight | less
+	#show = diff-highlight | less
+	#diff = diff-highlight | less
