@@ -39,6 +39,23 @@
 (global-linum-mode t) ;; enable line numbers globally
 (setq make-backup-files nil)
 (fset 'yes-or-no-p 'y-or-n-p)
+(add-to-list 'exec-path "/usr/local/bin")
+
+
+;; OS Specific stuff
+;; -------------------------------
+(cond
+ ((string-equal system-type "windows-nt") ; Microsoft Windows
+  (progn
+    (message "Microsoft Windows")))
+ ((string-equal system-type "darwin") ; Mac OS X
+  (progn
+    (message "Mac OS X")
+    (tool-bar-mode 0)))
+ ((string-equal system-type "gnu/linux") ; linux
+  (progn
+    (message "Linux"))))
+
 
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
@@ -75,6 +92,9 @@
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
 
+(global-set-key [home] 'move-beginning-of-line)
+(global-set-key [end] 'move-end-of-line)
+
 ;; Evernote/geeknote keys
 (global-set-key (kbd "C-c g c") 'geeknote-create)
 (global-set-key (kbd "C-c g e") 'geeknote-edit)
@@ -82,6 +102,11 @@
 (global-set-key (kbd "C-c g s") 'geeknote-show)
 ;; (global-set-key (kbd "C-c g r") 'geeknote-remove) ;; OMG why did I ever put this here
 (global-set-key (kbd "C-c g m") 'geeknote-move)
+
+;; ido makes everything nicer
+(ido-mode 1)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
 
 ;; Column counts please
 (column-number-mode t)
@@ -94,6 +119,9 @@
 (fset 'pdb-insert
    [?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
 (global-set-key  (kbd "C-x p") 'pdb-insert)
+
+;; Helm hack for saving search results
+(global-set-key (kbd "C-c a g") 'helm-do-ag-project-root)
 
 ;; Set a "different" default face for the eshell
 (defun my-buffer-face-mode-courrier ()
@@ -114,4 +142,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode git-gutter geeknote flycheck elpy ein better-defaults))))
+    (helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
