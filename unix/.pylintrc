@@ -53,7 +53,8 @@ disable-msg-cat=I
 #enable-msg=
 
 # Disable the message(s) with the given id(s).
-disable-msg=W0704
+#disable-msg=W0704,C0301
+disable=no-self-use,too-few-public-methods
 
 
 [REPORTS]
@@ -144,7 +145,7 @@ additional-builtins=
 [BASIC]
 
 # Required attributes for module, separated by a comma
-required-attributes=
+# required-attributes=
 
 # Regular expression which should only match functions or classes name which do
 # not require a docstring
@@ -224,7 +225,7 @@ int-import-graph=
 
 # List of interface methods to ignore, separated by a comma. This is used for
 # instance to not check methods defines in Zope's Interface base class.
-ignore-iface-methods=isImplementedBy,deferred,extends,names,namesAndDescriptions,queryDescriptionFor,getBases,getDescriptionFor,getDoc,getName,getTaggedValue,getTaggedValueTags,isEqualOrExtendedBy,setTaggedValue,isImplementedByInstancesOf,adaptWith,is_implemented_by
+# ignore-iface-methods=isImplementedBy,deferred,extends,names,namesAndDescriptions,queryDescriptionFor,getBases,getDescriptionFor,getDoc,getName,getTaggedValue,getTaggedValueTags,isEqualOrExtendedBy,setTaggedValue,isImplementedByInstancesOf,adaptWith,is_implemented_by
 
 # List of method names used to declare (i.e. assign) instance attributes.
 defining-attr-methods=__init__,__new__,setUp
@@ -299,7 +300,7 @@ ignore-docstrings=yes
 [FORMAT]
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=110
 
 # Maximum number of lines in a module
 max-module-lines=1000

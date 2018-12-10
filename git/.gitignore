@@ -16,3 +16,8 @@ commit_images
 .idea/
 .env
 .cache
+dash2.0/client/node_modules
+package-lock.json
+.pytest_cache/
+celerybeat-schedule.db
+.venv/

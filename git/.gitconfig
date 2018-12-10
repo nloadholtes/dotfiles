@@ -8,7 +8,8 @@
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore
-	pager = diff-highlight | less
+	pager = /usr/local/Cellar/git/2.17.1/share/git-core/contrib/diff-highlight/diff-highlight | bat -p
+	# less -r
 [alias]
 	ci = commit
 	al = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
@@ -23,6 +24,11 @@
 	forgetabout = update-index --assume-unchanged
 	remember = update-index --no-assume-unchanged
 	undo = reset --soft HEAD~1
+	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1;}; f"
+	pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	pr-update = "!fu() { git co master && git fetch ${2:-upstream} pull/$1/head:pr/$1 && git co - && git rebase FETCH_HEAD;}; fu"
+	up = "!f() { git pull upstream master && git push origin;}; f"
+
 [push]
 	default = current
 [init]
@@ -31,3 +37,7 @@
 	autosetuprebase = always
 [merge]
 	tool = kdiff3
+[pager]
+	#log = diff-highlight | less
+	#show = diff-highlight | less
+	#diff = diff-highlight | less
