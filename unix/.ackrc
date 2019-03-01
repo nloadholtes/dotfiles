@@ -27,6 +27,7 @@
 --ignore-directory=is:tmp
 --ignore-directory=is:.tox
 --ignore-directory=is:.venv
+--ignore-directory=is:.pytest_cache
 --ignore-directory=match:/^logs/
 --ignore-file=ext:bak
 --ignore-file=match:/~$/
