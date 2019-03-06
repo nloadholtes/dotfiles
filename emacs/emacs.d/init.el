@@ -78,6 +78,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "nil" :family "Tahoma"))))
  '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "yellow" :weight bold))))
  '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
@@ -140,5 +141,5 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
+    (pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
 

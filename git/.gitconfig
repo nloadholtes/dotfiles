@@ -8,7 +8,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-	pager = /usr/local/Cellar/git/2.20.1/share/git-core/contrib/diff-highlight/diff-highlight | bat -p
+	pager = /usr/local/Cellar/git/2.21.0/share/git-core/contrib/diff-highlight/diff-highlight | bat -p
 	# less -r
 [alias]
 	ci = commit
