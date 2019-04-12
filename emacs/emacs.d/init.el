@@ -23,7 +23,6 @@
     flycheck
     material-theme
     py-autopep8
-    geeknote
     markdown-mode))
 
 (mapc #'(lambda (package)
@@ -54,7 +53,8 @@
     (tool-bar-mode 0)))
  ((string-equal system-type "gnu/linux") ; linux
   (progn
-    (message "Linux"))))
+    (message "Linux")
+    (tool-bar-mode 0))))
 
 
 ;; PYTHON CONFIGURATION
