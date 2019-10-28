@@ -39,6 +39,7 @@
 (setq make-backup-files nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 (add-to-list 'exec-path "/usr/local/bin")
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 
 ;; OS Specific stuff
@@ -117,6 +118,11 @@
    [?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\)])
 (global-set-key  (kbd "C-x p") 'pdb-insert)
 
+;; Helper for formating XML
+(fset 'xml-format
+   [?\C-x ?h ?\C-u ?\M-| ?x ?m ?l ?l ?i ?n ?t ?  ?- ?- ?f ?o ?r ?m ?a ?t ?  ?- return])
+(global-set-key  (kbd "C-x o") 'xml-format)
+
 ;; Helm hack for saving search results
 (global-set-key (kbd "C-c a g") 'helm-do-ag-project-root)
 
@@ -133,13 +139,24 @@
 
 (add-hook 'clojure-mode-hook 'highlight-parentheses-mode)
 
+;; Inserting today's date
+(defun insert-todays-date (arg)
+  (interactive "P")
+  (insert (if arg
+              (format-time-string "%Y-%m-%d")
+            (format-time-string "[%Y-%m-%d]"))))
+(global-set-key "\C-x\M-d" `insert-todays-date)
+
 ;; init.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(eldoc-idle-delay 10)
+ '(elpy-eldoc-show-current-function nil)
+ '(org-agenda-files (quote ("~/Downloads/project-planning.org")))
  '(package-selected-packages
    (quote
-    (pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
+    (json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
 
