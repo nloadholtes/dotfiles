@@ -147,6 +147,17 @@
             (format-time-string "[%Y-%m-%d]"))))
 (global-set-key "\C-x\M-d" `insert-todays-date)
 
+(defun markdown-insert-header-3-date ()
+  "Insert a level three atx-style (hash mark) header that
+includes today's date.
+See `markdown-insert-header'."
+  (interactive "*")
+  (setq date (insert-todays-date nil))
+  (markdown-insert-header 3 date nil))
+
+(add-hook 'markdown-mode-hook
+	  (lambda() (local-set-key (kbd "C-c d") 'markdown-insert-header-3-date)))
+
 ;; init.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -158,5 +169,5 @@
  '(org-agenda-files (quote ("~/Downloads/project-planning.org")))
  '(package-selected-packages
    (quote
-    (json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
+    (todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults))))
 
