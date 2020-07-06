@@ -153,7 +153,9 @@ includes today's date.
 See `markdown-insert-header'."
   (interactive "*")
   (setq date (insert-todays-date nil))
-  (markdown-insert-header 3 date nil))
+  (markdown-insert-header 3 date nil)
+  (end-of-line)
+  (newline))
 
 (add-hook 'markdown-mode-hook
 	  (lambda() (local-set-key (kbd "C-c d") 'markdown-insert-header-3-date)))
