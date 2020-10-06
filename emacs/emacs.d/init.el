@@ -162,9 +162,10 @@ See `markdown-insert-header'."
 (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))  ;; Forcing gfm because it looks nicer
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
- '(markdown-command "markdown --extras=code-friendly")
- '(markdown-fontify-code-blocks-natively t)
- '(markdown-indent-on-enter nil)
+(setq markdown-command "markdown --extras=code-friendly")
+(setq markdown-fontify-code-blocks-natively t)
+(setq markdown-indent-on-enter nil)
+(setq markdown-asymmetric-header t)
 
 ;; End of Markdown section
 
