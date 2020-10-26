@@ -73,6 +73,9 @@
 ;; (require 'py-autopep8)
 ;; (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
 ;; colors and keys
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -179,5 +182,5 @@ See `markdown-insert-header'."
  '(elpy-eldoc-show-current-function nil)
  '(org-agenda-files '("~/Downloads/project-planning.org"))
  '(package-selected-packages
-   '(markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults)))
+   '(jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults)))
 
