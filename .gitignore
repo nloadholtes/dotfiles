@@ -13,3 +13,4 @@ emacs/emacs.d/#*
 emacs/emacs.d/transient/history.el
 emacs/emacs.d/elpy
 emacs/emacs.d/.python-environments
+emacs/emacs.d/ac-comphist.dat
