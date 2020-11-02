@@ -40,6 +40,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (add-to-list 'exec-path "/usr/local/bin")
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+(which-function-mode t)
 
 
 ;; OS Specific stuff
