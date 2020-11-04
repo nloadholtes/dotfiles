@@ -66,9 +66,9 @@
 ;;(elpy-use-ipython)
 
 ;; use flycheck not flymake with elpy
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+;; (when (require 'flycheck nil t)
+;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 ;; enable autopep8 formatting on save
 ;; (require 'py-autopep8)
@@ -78,22 +78,26 @@
 (setq jedi:complete-on-dot t)
 (setq popup-use-optimized-column-computation nil)
 (add-hook 'python-mode-hook 'blacken-mode)
+
 ;; colors and keys
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "nil" :family "Tahoma"))))
+ '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "DAMA" :family "Ubuntu"))))
  '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "yellow" :weight bold))))
  '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
- '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green")))))
+ '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green"))))
+ '(popup-face ((t (:background "lightgray" :foreground "black" :family "noto mono")))))
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
+(global-set-key "\C-w" 'backward-kill-word)  ;; Steve Yegge suggestion for faster typing
+(global-set-key "\C-x\C-k" 'kill-region)
 
 (global-set-key [home] 'move-beginning-of-line)
 (global-set-key [end] 'move-end-of-line)
@@ -180,9 +184,12 @@ See `markdown-insert-header'."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(eldoc-idle-delay 10)
  '(elpy-eldoc-show-current-function nil)
  '(org-agenda-files '("~/Downloads/project-planning.org"))
  '(package-selected-packages
-   '(blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode geeknote flycheck elpy ein better-defaults)))
+   '(blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck elpy ein better-defaults))
+ '(tool-bar-mode nil)
+ '(which-function-mode t))
 
