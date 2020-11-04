@@ -122,7 +122,7 @@
 ;; Helper for formating XML
 (fset 'xml-format
    [?\C-x ?h ?\C-u ?\M-| ?x ?m ?l ?l ?i ?n ?t ?  ?- ?- ?f ?o ?r ?m ?a ?t ?  ?- return])
-(global-set-key  (kbd "C-x o") 'xml-format)
+(global-set-key  (kbd "C-x x") 'xml-format)
 
 ;; Helm hack for saving search results
 (global-set-key (kbd "C-c a g") 'helm-do-ag-project-root)
