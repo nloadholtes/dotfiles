@@ -96,7 +96,7 @@
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-x w") 'whitespace-mode)
-(global-set-key "\C-w" 'backward-kill-word)  ;; Steve Yegge suggestion for faster typing
+;; (global-set-key "\C-e" 'backward-kill-word)  ;; Steve Yegge suggestion for faster typing
 (global-set-key "\C-x\C-k" 'kill-region)
 
 (global-set-key [home] 'move-beginning-of-line)
@@ -189,7 +189,7 @@ See `markdown-insert-header'."
  '(elpy-eldoc-show-current-function nil)
  '(org-agenda-files '("~/Downloads/project-planning.org"))
  '(package-selected-packages
-   '(blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck elpy ein better-defaults))
+   '(git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck elpy ein better-defaults))
  '(tool-bar-mode nil)
  '(which-function-mode t))
 
