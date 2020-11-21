@@ -9,8 +9,8 @@
        '("melpa" . "http://melpa.org/packages/") t)
 
 (require 'package)
-(add-to-list 'package-archives
-             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+;; (add-to-list 'package-archives
+;;              '("elpy" . "http://jorgenschaefer.github.io/packages/"))
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -19,7 +19,7 @@
 (defvar myPackages
   '(better-defaults
     ein
-    elpy
+    ;; elpy
     flycheck
     material-theme
     py-autopep8
@@ -62,7 +62,7 @@
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
 
-(elpy-enable)
+;; (elpy-enable)
 ;;(elpy-use-ipython)
 
 ;; use flycheck not flymake with elpy
@@ -186,10 +186,10 @@ See `markdown-insert-header'."
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(eldoc-idle-delay 10)
- '(elpy-eldoc-show-current-function nil)
+ ;; '(elpy-eldoc-show-current-function nil)
  '(org-agenda-files '("~/Downloads/project-planning.org"))
  '(package-selected-packages
-   '(git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck elpy ein better-defaults))
+   '(git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck ein better-defaults))
  '(tool-bar-mode nil)
  '(which-function-mode t))
 
