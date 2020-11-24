@@ -78,6 +78,7 @@
 (setq jedi:complete-on-dot t)
 (setq popup-use-optimized-column-computation nil)
 (add-hook 'python-mode-hook 'blacken-mode)
+(add-hook 'python-mode-hook 'pyvenv-mode)
 
 ;; colors and keys
 (custom-set-faces
