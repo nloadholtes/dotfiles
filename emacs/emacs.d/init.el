@@ -79,6 +79,9 @@
 (setq popup-use-optimized-column-computation nil)
 (add-hook 'python-mode-hook 'blacken-mode)
 (add-hook 'python-mode-hook 'pyvenv-mode)
+(add-hook 'python-mode-hook 'highlight-parentheses-mode)
+(add-hook 'python-mode-hook 'highlight-indent-mode)
+
 
 ;; colors and keys
 (custom-set-faces
