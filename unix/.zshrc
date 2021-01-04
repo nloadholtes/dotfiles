@@ -13,3 +13,20 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # For some reason zsh isn't doing this automattically
 source ~/.zprofile
 
+#
+## zsh stuff
+export SAVEHIST=1000000000
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+export HISTFILE=~/.zsh_history
+export HISTTIMEFORMAT="[%F %T] "
+#
+setopt HIST_FIND_NO_DUPS
+# following should be turned off, if sharing history via setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+
+
+[ -f ~/.quantumrc ] && source ~/.quantumrc
+
+export WORKSPACE="$HOME/workspace"
