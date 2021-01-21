@@ -30,3 +30,6 @@ setopt EXTENDED_HISTORY
 [ -f ~/.quantumrc ] && source ~/.quantumrc
 
 export WORKSPACE="$HOME/workspace"
+
+# To customize prompt, run `p10k configure` or edit ~/projects/github/dotfiles/unix/.p10k.zsh.
+[[ ! -f ~/projects/github/dotfiles/unix/.p10k.zsh ]] || source ~/projects/github/dotfiles/unix/.p10k.zsh
