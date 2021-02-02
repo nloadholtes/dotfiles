@@ -82,6 +82,10 @@
 ;; Ugh, can't get this working like I want
 ;;(add-hook 'python-mode 'highlight-indent-guides-mode)
 
+;; Helper for sorting imports
+;; Doesn't work, tired of messing with it
+(define-key python-mode-map (kbd "C-c o") (lambda (interactive) (py-isort-buffer)))
+
 ;; Highlight parentheses everywhere
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
@@ -199,7 +203,7 @@ See `markdown-insert-header'."
  '(eldoc-idle-delay 10)
  '(org-agenda-files '("~/Downloads/project-planning.org"))
  '(package-selected-packages
-   '(org-roam dot-mode jinja2-mode highlight-indent-guides git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck ein better-defaults))
+   '(py-isort org-roam dot-mode jinja2-mode highlight-indent-guides git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck ein better-defaults))
  '(tool-bar-mode nil)
  '(which-function-mode t))
 
