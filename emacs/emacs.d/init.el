@@ -84,7 +84,7 @@
 
 ;; Helper for sorting imports
 ;; Doesn't work, tired of messing with it
-(define-key python-mode-map (kbd "C-c o") (lambda (interactive) (py-isort-buffer)))
+(define-key python-mode-map (kbd "C-c o") #'py-isort-buffer)
 
 ;; Highlight parentheses everywhere
 (define-globalized-minor-mode global-highlight-parentheses-mode
