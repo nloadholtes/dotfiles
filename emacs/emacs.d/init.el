@@ -139,6 +139,11 @@
    [?\C-x ?h ?\C-u ?\M-| ?x ?m ?l ?l ?i ?n ?t ?  ?- ?- ?f ?o ?r ?m ?a ?t ?  ?- return])
 (global-set-key  (kbd "C-x x") 'xml-format)
 
+;; Insert a - instead of a * in markdown docs
+(fset 'dash-insert
+      [return \-])
+(global-set-key (kbd "M-S-RET") 'dash-insert)  ;; NOT WORKING. Also, make this markdown not global key.
+
 ;; Helm hack for saving search results
 (global-set-key (kbd "C-c a g") 'helm-do-ag-project-root)
 
