@@ -195,6 +195,7 @@ See `markdown-insert-header'."
 (setq markdown-fontify-code-blocks-natively t)
 (setq markdown-indent-on-enter nil)
 (setq markdown-asymmetric-header t)
+(setq markdown-enable-wiki-links t)
 
 ;; End of Markdown section
 
@@ -206,9 +207,9 @@ See `markdown-insert-header'."
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(eldoc-idle-delay 10)
- '(org-agenda-files '("~/Downloads/project-planning.org"))
+ '(org-agenda-files nil)
  '(package-selected-packages
-   '(py-isort org-roam dot-mode jinja2-mode highlight-indent-guides git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck ein better-defaults))
+   '(annotate py-isort org-roam dot-mode jinja2-mode highlight-indent-guides git-gutter-fringe+ git-gutter+ blacken jedi-direx markdown-mode+ todoist json-reformat org-bullets org-mind-map pyenv-mode-auto pyfmt helm-ag helm cider carbon-now-sh highlight-parentheses dockerfile-mode yaml-mode clojure-mode pyenv-mode pylint pig-mode coverage writegood-mode pydoc coffee-mode handlebars-mode python-docstring php-mode terraform-mode py-autopep8 php+-mode material-theme markdown-mode jedi go-mode flycheck ein better-defaults))
  '(tool-bar-mode nil)
  '(which-function-mode t))
 
