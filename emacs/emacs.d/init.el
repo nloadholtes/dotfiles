@@ -68,16 +68,17 @@
 ;;(elpy-use-ipython)
 
 ;; use flycheck not flymake with elpy
-;; (when (require 'flycheck nil t)
-;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 ;; enable autopep8 formatting on save
 ;; (require 'py-autopep8)
 ;; (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; I think that jedi was interferring with elpy, both popping up the completion box
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 (setq popup-use-optimized-column-computation nil)
 (add-hook 'python-mode-hook 'blacken-mode)
 (add-hook 'python-mode-hook 'pyvenv-mode)
@@ -97,17 +98,17 @@
 
 
 ;; colors and keys
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "DAMA" :family "Ubuntu"))))
- '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "yellow" :weight bold))))
- '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
- '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
- '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green"))))
- '(popup-face ((t (:background "lightgray" :foreground "black" :family "noto mono")))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "DAMA" :family "Ubuntu"))))
+;;  '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "yellow" :weight bold))))
+;;  '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "SkyBlue"))))
+;;  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "Cyan" :weight bold))))
+;;  '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green"))))
+;;  '(popup-face ((t (:background "lightgray" :foreground "black" :family "noto mono")))))
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
@@ -150,12 +151,12 @@
 (global-set-key (kbd "C-c a g") 'helm-do-ag-project-root)
 
 ;; Set a "different" default face for the eshell
-(defun my-buffer-face-mode-courrier ()
-    (interactive)
-    (setq buffer-face-mode-face '(:family "Monospace" :height 100))
-    (buffer-face-mode))
-(add-hook 'eshell-mode-hook 'my-buffer-face-mode-courrier)
-(add-hook 'shell-mode-hook 'my-buffer-face-mode-courrier)
+;; (defun my-buffer-face-mode-courrier ()
+;;     (interactive)
+;;     (setq buffer-face-mode-face '(:family "Monospace" :height 100))
+;;     (buffer-face-mode))
+;; (add-hook 'eshell-mode-hook 'my-buffer-face-mode-courrier)
+;; (add-hook 'shell-mode-hook 'my-buffer-face-mode-courrier)
 
 ;; Server mode so we can be a fast editor
 (server-mode t)
