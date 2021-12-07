@@ -16,3 +16,5 @@ emacs/emacs.d/.python-environments
 emacs/emacs.d/ac-comphist.dat
 emacs/emacs.d/org-roam.db
 emacs/emacs.d/annotations
+emacs/emacs.d/.emacs.desktop
+emacs/emacs.d/.emacs.desktop.lock
