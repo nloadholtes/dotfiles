@@ -19,8 +19,9 @@
 (defvar myPackages
   '(better-defaults
     ein
-    ;; elpy
+    elpy
     flycheck
+    blacken
     material-theme
     py-autopep8
     markdown-mode))
@@ -36,6 +37,7 @@
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
+(setq linum-format "%4d \u2502 ")  ;; format line number spacing
 (setq make-backup-files nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 (add-to-list 'exec-path "/usr/local/bin")
@@ -62,7 +64,7 @@
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
 
-;; (elpy-enable)
+(elpy-enable)
 ;;(elpy-use-ipython)
 
 ;; use flycheck not flymake with elpy
