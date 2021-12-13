@@ -67,7 +67,6 @@
 ;; --------------------------------------
 
 (elpy-enable)
-;;(elpy-use-ipython)
 
 ;; use flycheck not flymake with elpy
 (when (require 'flycheck nil t)
@@ -82,8 +81,11 @@
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 ;; (setq jedi:complete-on-dot t)
 (setq popup-use-optimized-column-computation nil)
-(add-hook 'python-mode-hook 'blacken-mode)
+
+;; commented out, kinda slow on save
+;;(add-hook 'python-mode-hook 'blacken-mode)
 (add-hook 'python-mode-hook 'pyvenv-mode)
+
 ;; Ugh, can't get this working like I want
 ;;(add-hook 'python-mode 'highlight-indent-guides-mode)
 
@@ -98,6 +100,10 @@
     (highlight-parentheses-mode t)))
 (global-highlight-parentheses-mode t)
 
+;; Force py3
+(setq elpy-rpc-python-command "python3.7")
+;; (setq python-shell-interpreter "ipython3"
+;;       python-shell-interpreter-args "-i --simple-prompt")
 
 ;; colors and keys
 ;; (custom-set-faces
