@@ -78,8 +78,8 @@
 ;; (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; I think that jedi was interferring with elpy, both popping up the completion box
-;; (add-hook 'python-mode-hook 'jedi:setup)
-;; (setq jedi:complete-on-dot t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 (setq popup-use-optimized-column-computation nil)
 
 ;; commented out, kinda slow on save
