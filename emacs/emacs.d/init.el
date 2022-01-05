@@ -117,6 +117,10 @@
 ;;  '(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground "green"))))
 ;;  '(popup-face ((t (:background "lightgray" :foreground "black" :family "noto mono")))))
 
+
+;;
+;; Setup keybindings
+;;
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-<tab>") 'other-window)
@@ -157,13 +161,9 @@
 ;; Helm hack for saving search results
 (global-set-key (kbd "C-c a g") 'helm-do-ag-project-root)
 
-;; Set a "different" default face for the eshell
-;; (defun my-buffer-face-mode-courrier ()
-;;     (interactive)
-;;     (setq buffer-face-mode-face '(:family "Monospace" :height 100))
-;;     (buffer-face-mode))
-;; (add-hook 'eshell-mode-hook 'my-buffer-face-mode-courrier)
-;; (add-hook 'shell-mode-hook 'my-buffer-face-mode-courrier)
+;;
+;; End of keybindings
+;;
 
 ;; Server mode so we can be a fast editor
 (server-mode t)
