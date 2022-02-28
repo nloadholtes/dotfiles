@@ -44,6 +44,14 @@
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 (which-function-mode t)
 
+;; Useful snippet to recreate the scratch
+;; buffer in case it gets deleted/saved.
+;;
+(defun create-scratch-buffer nil
+  "create a scratch buffer"
+  (interactive)
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode))
 
 ;; OS Specific stuff
 ;; -------------------------------
