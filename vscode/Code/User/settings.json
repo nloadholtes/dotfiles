@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "python.diagnostics.sourceMapsEnabled": true,
+    "editor.tokenColorCustomizations": {
+    "comments": "#dddd00",
+    "strings": "#00dd00",
+    "keywords": "#00dddd"
+    }
+}
