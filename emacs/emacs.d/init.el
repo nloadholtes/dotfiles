@@ -101,11 +101,11 @@
 (define-key python-mode-map (kbd "C-c o") #'py-isort-buffer)
 
 ;; Highlight parentheses everywhere
-(define-globalized-minor-mode global-highlight-parentheses-mode
-  highlight-parentheses-mode
-  (lambda ()
-    (highlight-parentheses-mode t)))
-(global-highlight-parentheses-mode t)
+;;(define-globalized-minor-mode global-highlight-parentheses-mode
+;;  highlight-parentheses-mode
+;;  (lambda ()
+;;    (highlight-parentheses-mode t)))
+;;(global-highlight-parentheses-mode t)
 
 ;; Force py3
 (setq elpy-rpc-python-command "python3.7")
