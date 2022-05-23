@@ -12,5 +12,9 @@
     {
         "key": "ctrl+e",
         "command": "workbench.action.editor.changeEOL"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "extension.openScratchpad"
     }
 ]
