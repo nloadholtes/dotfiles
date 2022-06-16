@@ -6,8 +6,10 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-vscode.makefile-tools
 redhat.java
 redhat.vscode-yaml
+rust-lang.rust-analyzer
 tamasfe.even-better-toml
 Tyriar.sort-lines
 usernamehw.errorlens
