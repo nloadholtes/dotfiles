@@ -8,5 +8,6 @@
     },
     "redhat.telemetry.enabled": false,
     "yaml.schemaStore.enable": false,
-    "editor.parameterHints.enabled": false
+    "editor.parameterHints.enabled": false,
+    "autoDocstring.docstringFormat": "numpy"
 }
