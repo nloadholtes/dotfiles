@@ -13,6 +13,8 @@
     "window.zoomLevel": -1,
     "diffEditor.ignoreTrimWhitespace": false,
     "pylint.args": [
-        "--disable=E0015"
+        "--disable=E0015",
+        "--disable=C0114",
+        "--disable=R0022"
     ]
 }
