@@ -4,8 +4,8 @@ mkdir ~/projects/github
 mkdir ~/bin
 mkdir -p ~/.git_template/hooks
  
-cd ~/projects/bitbucket
-hg clone ssh://hg@bitbucket.org/nloadholtes/dotfiles
+cd ~/projects/github
+git clone git@github.com:nloadholtes/dotfiles.git
 
 cd
 ln -s projects/bitbucket/dotfiles/hg/.hgrc .hgrc
