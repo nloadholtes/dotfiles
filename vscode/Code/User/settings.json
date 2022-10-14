@@ -16,5 +16,6 @@
         "--disable=E0015",
         "--disable=C0114",
         "--disable=R0022"
-    ]
+    ],
+    "editor.formatOnSave": true,
 }
