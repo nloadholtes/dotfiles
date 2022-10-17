@@ -1,21 +1,18 @@
 {
-    "workbench.colorTheme": "Visual Studio Dark",
-    "python.diagnostics.sourceMapsEnabled": true,
-    "editor.tokenColorCustomizations": {
+  "workbench.colorTheme": "Visual Studio Dark",
+  "python.diagnostics.sourceMapsEnabled": true,
+  "editor.tokenColorCustomizations": {
     "comments": "#dddd00",
     "strings": "#00dd00",
     "keywords": "#00dddd"
-    },
-    "redhat.telemetry.enabled": false,
-    "yaml.schemaStore.enable": false,
-    "editor.parameterHints.enabled": false,
-    "autoDocstring.docstringFormat": "numpy",
-    "window.zoomLevel": -1,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "pylint.args": [
-        "--disable=E0015",
-        "--disable=C0114",
-        "--disable=R0022"
-    ],
-    "editor.formatOnSave": true,
+  },
+  "redhat.telemetry.enabled": false,
+  "yaml.schemaStore.enable": false,
+  "editor.parameterHints.enabled": false,
+  "autoDocstring.docstringFormat": "numpy",
+  "window.zoomLevel": -1,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "pylint.args": ["--disable=E0015", "--disable=C0114", "--disable=R0022"],
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable"
 }
