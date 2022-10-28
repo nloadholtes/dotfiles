@@ -16,10 +16,12 @@
   "editor.formatOnSave": true,
   "[rust]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
   },
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.renderColons": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "html.format.contentUnformatted": "",
 }
