@@ -1,4 +1,5 @@
 awesomektvn.scratchpad
+bungcip.better-toml
 deerawan.vscode-dash
 dionmunk.vscode-notes
 donjayamanne.githistory
@@ -21,7 +22,7 @@ njpwerner.autodocstring
 redhat.java
 redhat.vscode-yaml
 rust-lang.rust-analyzer
-tamasfe.even-better-toml
+StackBuild.bazel-stack-vscode
 Tyriar.sort-lines
 usernamehw.errorlens
 VisualStudioExptTeam.intellicode-api-usage-examples
