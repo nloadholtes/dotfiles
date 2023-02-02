@@ -26,5 +26,8 @@
   "html.format.contentUnformatted": "",
   "sortLines.filterBlankLines": true,
   "rust-analyzer.checkOnSave.command": "clippy",
-  "githubPullRequests.terminalLinksHandler": "github"
+  "githubPullRequests.terminalLinksHandler": "github",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }
