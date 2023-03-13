@@ -32,6 +32,7 @@
 
 [push]
 	default = current
+	autoSetupRemote = true
 [init]
 	templatedir = ~/.git_template
 [branch]
