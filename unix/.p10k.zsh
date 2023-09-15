@@ -77,6 +77,7 @@
     haskell_stack           # haskell version from stack (https://haskellstack.org/)
     kubecontext             # current kubernetes context (https://kubernetes.io/)
     terraform               # terraform workspace (https://www.terraform.io)
+	custom_awsvault
     aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
     aws_eb_env              # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
     azure                   # azure account name (https://docs.microsoft.com/en-us/cli/azure)
@@ -1252,7 +1253,16 @@
   # Show aws only when the the command you are typing invokes one of these tools.
   # Tip: Remove the next line to always show aws.
   typeset -g POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|terragrunt'
-
+  ##############[ custom_awsvault: current aws account (https://github.com/99designs/aws-vault) ]###############
+  awsvault_prompt() {
+    if [ ! -z "${AWS_VAULT-}" ]; then
+      echo -n " ${AWS_VAULT-} "
+    fi
+  }
+  typeset -g POWERLEVEL9K_CUSTOM_AWSVAULT="awsvault_prompt"
+  typeset -g POWERLEVEL9K_CUSTOM_AWSVAULT_FOREGROUND="black"
+  typeset -g POWERLEVEL9K_CUSTOM_AWSVAULT_BACKGROUND="yellow"
+  typeset -g POWERLEVEL9K_CUSTOM_AWSVAULT_VISUAL_IDENTIFIER_EXPANSION=' ☁️'
   # POWERLEVEL9K_AWS_CLASSES is an array with even number of elements. The first element
   # in each pair defines a pattern against which the current AWS profile gets matched.
   # More specifically, it's P9K_CONTENT prior to the application of context expansion (see below)
@@ -1557,6 +1567,7 @@
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
   (( ! $+functions[p10k] )) || p10k reload
 }
+
 
 # Tell `p10k configure` which file it should overwrite.
 typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
