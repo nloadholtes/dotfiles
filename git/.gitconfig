@@ -8,7 +8,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-	pager = bat -p
+	pager = bat -p 
+	#/usr/local/Cellar/git/2.21.0/share/git-core/contrib/diff-highlight/diff-highlight | bat -p
 	# less -r
 [alias]
 	ci = commit
@@ -35,6 +36,7 @@
 	autoSetupRemote = true
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [branch]
 	autosetuprebase = always
 [merge]
