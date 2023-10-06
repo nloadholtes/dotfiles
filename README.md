@@ -1,5 +1,5 @@
 # dotfiles
-THESE ARE MY TODFILES. THERE ARE MANY LIKE THEM, BUT THIS ONE IS MINE.
+THESE ARE MY DOTFILES. THERE ARE MANY LIKE THEM, BUT THIS ONE IS MINE.
 
 ## vscode
 To get the list of extensions installed:

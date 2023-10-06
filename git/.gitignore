@@ -27,3 +27,4 @@ TAGS
 .\#*
 .pytest_cache/
 .vscode/settings.json
+*.pem
