@@ -7,6 +7,8 @@ set number
 set ls=2
 set tabstop=4
 
+highlight Comment ctermfg=yellow
+
 hi User1 guifg=#eea040 guibg=#222222
 hi User2 guifg=#dd3333 guibg=#222222
 hi User3 guifg=#ff66ff guibg=#222222
