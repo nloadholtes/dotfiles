@@ -34,9 +34,17 @@ export WORKSPACE="$HOME/workspace"
 # To customize prompt, run `p10k configure` or edit ~/projects/github/dotfiles/unix/.p10k.zsh.
 [[ ! -f ~/projects/github/dotfiles/unix/.p10k.zsh ]] || source ~/projects/github/dotfiles/unix/.p10k.zsh
 
-source <(kubectl completion zsh)
-source <(k3d completion zsh)
-source <(helm completion zsh)
+if command -v kubectl > /dev/null 2>&1 ; then
+	source <(kubectl completion zsh)
+fi
+
+if command -v k3d > /dev/null 2>&1; then
+	source <(k3d completion zsh)
+fi
+
+if command -v helm > /dev/null 2>&1; then
+	source <(helm completion zsh)
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
