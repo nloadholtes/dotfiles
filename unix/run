@@ -15,9 +15,9 @@ exit_status=$?
 
 # Display notification based on the exit status
 if [ $exit_status -eq 0 ]; then
-    notify-send "Command Successful" "The command '$*' has completed successfully."
+    notify-send "Successful Command" "'$*' completed successfully."
 else
-    notify-send "Command Failed" "The command '$*' has failed with exit status $exit_status."
+    notify-send "Failed Command" "FAILED with $exit_status :  '$*'"
 fi
 
 exit $exit_status
