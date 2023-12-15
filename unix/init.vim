@@ -8,14 +8,13 @@ set ls=2
 set tabstop=4
 
 highlight Comment ctermfg=yellow
-
+highlight String ctermfg=2
 
 hi User1 guifg=#eea040 guibg=#222222
 hi User2 guifg=#dd3333 guibg=#222222
 hi User3 guifg=#ff66ff guibg=#222222
 hi User4 guifg=#a0ee40 guibg=#222222
 hi User5 guifg=#eeee40 guibg=#222222
-
 
 set statusline +=%1*\ %n\ %*            "buffer number
 " set statusline +=%5*%{&ff}%*            "file format
