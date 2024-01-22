@@ -22,9 +22,19 @@ export HISTFILE=~/.zsh_history
 export HISTTIMEFORMAT="[%F %T] "
 #
 setopt HIST_FIND_NO_DUPS
-# following should be turned off, if sharing history via setopt SHARE_HISTORY
-setopt INC_APPEND_HISTORY
-setopt EXTENDED_HISTORY
+
+# From https://github.com/mrnugget/dotfiles/blob/2bdf21b659cbf34f21a0716bfac1f90914426a87/zshrc?utm_source=substack&utm_medium=email#L18-L35
+# But might not be needed is using atuin (see bottom of this file)
+setopt INC_APPEND_HISTORY     # Immediately append to history file.
+setopt EXTENDED_HISTORY       # Record timestamp in history.
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS       # Dont record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS      # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE      # Dont record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS      # Dont write duplicate entries in the history file.
+setopt SHARE_HISTORY          # Share history between all sessions.
+unsetopt HIST_VERIFY          # Execute commands using history (e.g.: using !$) immediately
 
 
 [ -f ~/.quantumrc ] && source ~/.quantumrc
@@ -49,3 +59,5 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+eval "$(atuin init zsh)"
