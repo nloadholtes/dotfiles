@@ -1,3 +1,5 @@
+#zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -48,16 +50,18 @@ if command -v kubectl > /dev/null 2>&1 ; then
 	source <(kubectl completion zsh)
 fi
 
-if command -v k3d > /dev/null 2>&1; then
-	source <(k3d completion zsh)
-fi
+#if command -v k3d > /dev/null 2>&1; then
+#	source <(k3d completion zsh)
+#fi
 
-if command -v helm > /dev/null 2>&1; then
+#if command -v helm > /dev/null 2>&1; then
 	source <(helm completion zsh)
-fi
+#fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="$HOME/.sdkman"
+#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 eval "$(atuin init zsh)"
+
+#zprof
