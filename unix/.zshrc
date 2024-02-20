@@ -55,7 +55,7 @@ fi
 #fi
 
 #if command -v helm > /dev/null 2>&1; then
-	source <(helm completion zsh)
+#	source <(helm completion zsh)
 #fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
