@@ -38,6 +38,8 @@ setopt HIST_SAVE_NO_DUPS      # Dont write duplicate entries in the history file
 setopt SHARE_HISTORY          # Share history between all sessions.
 unsetopt HIST_VERIFY          # Execute commands using history (e.g.: using !$) immediately
 
+# Useful
+alias upgrade_zoom="curl -L -o /tmp/zoom_amd64.deb https://zoom.us/client/latest/zoom_amd64.deb && sudo dpkg -i /tmp/zoom_amd64.deb"
 
 [ -f ~/.quantumrc ] && source ~/.quantumrc
 
