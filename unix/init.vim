@@ -26,3 +26,14 @@ set statusline +=%2*/%L%*               "total lines
 set statusline +=%3*%4v\ %*             "virtual column number
 set statusline +=%5*0x%04B\ %*          "character under cursor
 
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+call plug#begin('~/.local/share/nvim/plugged')
+
+" List of plugins
+" ...
+Plug 'mustache/vim-mustache-handlebars'
+
+" Initialize plugin system
+call plug#end()
+
