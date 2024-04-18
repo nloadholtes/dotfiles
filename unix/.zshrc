@@ -45,20 +45,24 @@ alias upgrade_zoom="curl -L -o /tmp/zoom_amd64.deb https://zoom.us/client/latest
 
 export WORKSPACE="$HOME/workspace"
 
+# Force autocompletion to work by activating compdef
+autoload -Uz compinit
+compinit
+
 # To customize prompt, run `p10k configure` or edit ~/projects/github/dotfiles/unix/.p10k.zsh.
 [[ ! -f ~/projects/github/dotfiles/unix/.p10k.zsh ]] || source ~/projects/github/dotfiles/unix/.p10k.zsh
 
 if command -v kubectl > /dev/null 2>&1 ; then
-	source <(kubectl completion zsh)
+   source <(kubectl completion zsh)
 fi
 
-#if command -v k3d > /dev/null 2>&1; then
-#	source <(k3d completion zsh)
-#fi
+if command -v k3d > /dev/null 2>&1; then
+	source <(k3d completion zsh)
+fi
 
-#if command -v helm > /dev/null 2>&1; then
-#	source <(helm completion zsh)
-#fi
+if command -v helm > /dev/null 2>&1; then
+	source <(helm completion zsh)
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="$HOME/.sdkman"
@@ -67,3 +71,7 @@ fi
 eval "$(atuin init zsh)"
 
 #zprof
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/nick.loadholtes/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
