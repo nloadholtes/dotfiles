@@ -64,6 +64,33 @@ if command -v helm > /dev/null 2>&1; then
 	source <(helm completion zsh)
 fi
 
+on() {
+    local title="$@"
+	local snake_case_title=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/ /_/g')
+    local date=$(date +%Y-%m-%d)
+    local filename="$HOME/projects/github/improved-memory/inbox/${date}_${snake_case_title// /_}.md"
+
+    mkdir -p "$(dirname "$filename")"
+
+    cat << EOF > "$filename"
+---
+title: $title
+date: $date
+tags:
+  - 
+hubs:
+  - [[]]
+---
+
+# $title
+
+
+EOF
+
+    # Open the file in Neovim
+    vi "$filename"
+}
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="$HOME/.sdkman"
 #[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
