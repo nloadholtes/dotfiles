@@ -78,8 +78,6 @@ title: $title
 date: $date
 tags:
   - 
-hubs:
-  - [[]]
 ---
 
 # $title
