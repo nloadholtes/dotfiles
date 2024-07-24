@@ -89,6 +89,11 @@ EOF
     vi "$filename"
 }
 
+# A great way to clean up docker containers and images that aren't used anymore
+alias dockercleancontainers="docker rm \$(docker ps -a --no-trunc | grep 'Exit' | awk '{print \$1}')"
+alias dockercleanimages='docker rmi $(docker images -f dangling=true -q)'
+alias dockerclean='dockercleancontainers && dockercleanimages'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="$HOME/.sdkman"
 #[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -104,3 +109,5 @@ export PATH="/Users/nick.loadholtes/.rd/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.atuin/bin/env"
