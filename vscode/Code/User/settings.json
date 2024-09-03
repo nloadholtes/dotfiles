@@ -29,5 +29,6 @@
   "githubPullRequests.terminalLinksHandler": "github",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
-  }
+  },
+  "githubPullRequests.pullBranch": "never"
 }
