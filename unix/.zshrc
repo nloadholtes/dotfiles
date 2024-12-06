@@ -112,3 +112,5 @@ export NVM_DIR="$HOME/.nvm"
 
 . "$HOME/.atuin/bin/env"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+. "$HOME/.local/bin/env"
