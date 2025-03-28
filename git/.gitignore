@@ -29,3 +29,4 @@ TAGS
 .vscode/settings.json
 *.pem
 misc/docs/.obsidian/
+.venv-poetry
