@@ -1,23 +1,36 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-        "key": "ctrl+alt+n",
-        "command": "extension.openScratchpad"
+  {
+    "key": "ctrl+alt+n",
+    "command": "extension.openScratchpad"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "cursorLineEnd"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "cursorLineStart"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "editor.action.selectAll"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}"
     },
-    {
-        "key": "alt+t",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "cursorLineEnd"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "cursorLineStart"
-    },
-    {
-        "key": "ctrl+shift+a",
-        "command": "editor.action.selectAll"
-    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "-workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled"
+  }
 ]
