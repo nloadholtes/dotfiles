@@ -98,8 +98,6 @@ alias dockerclean='dockercleancontainers && dockercleanimages'
 #export SDKMAN_DIR="$HOME/.sdkman"
 #[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-eval "$(atuin init zsh)"
-
 #zprof
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
@@ -111,6 +109,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Not sure why/what added this, but it is gone now.
