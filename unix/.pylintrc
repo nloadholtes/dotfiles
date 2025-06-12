@@ -16,7 +16,7 @@ rcfile=/home/njl/.pylintrc
 #init-hook=
 
 # Profiled execution.
-profile=no
+# profile=no
 
 # Add <file or directory> to the black list. It should be a base name, not a
 # path. You may set this option multiple times.
@@ -26,7 +26,7 @@ ignore=CVS
 persistent=yes
 
 # Set the cache size for astng objects.
-cache-size=500
+# cache-size=500
 
 # List of plugins (as comma separated values of python modules names) to load,
 # usually to register additional checkers.
@@ -47,14 +47,14 @@ load-plugins=
 #enable-msg-cat=
 
 # Disable all messages in the listed categories (IRCWEF).
-disable-msg-cat=I
+# disable-msg-cat=I
 
 # Enable the message(s) with the given id(s).
 #enable-msg=
 
 # Disable the message(s) with the given id(s).
 #disable-msg=W0704,C0301
-disable=no-self-use,too-few-public-methods,missing-docstring,import-error,unspecified-encoding,redefined-outer-name
+disable=too-few-public-methods,missing-docstring,import-error,unspecified-encoding,redefined-outer-name
 
 
 [REPORTS]
@@ -64,12 +64,12 @@ disable=no-self-use,too-few-public-methods,missing-docstring,import-error,unspec
 output-format=text
 
 # Include message's id in output
-include-ids=no
+# include-ids=no
 
 # Put messages in a separate file for each module / package specified on the
 # command line instead of printing them on stdout. Reports (if any) will be
 # written in a file name "pylint_global.[txt|html]".
-files-output=no
+# files-output=no
 
 # Tells whether to display a full report or only the messages
 reports=yes
@@ -83,7 +83,7 @@ evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / stateme
 
 # Add a comment according to your evaluation note. This is used by the global
 # evaluation report (R0004).
-comment=no
+# comment=no
 
 # Enable the report(s) with the given id(s).
 #enable-report=
@@ -106,7 +106,7 @@ ignored-classes=SQLObject
 
 # When zope mode is activated, add a predefined set of Zope acquired attributes
 # to generated-members.
-zope=no
+# zope=no
 
 # List of members which are set dynamically and missed by pylint inference
 # system, and so shouldn't trigger E0201 when accessed.
@@ -186,7 +186,7 @@ good-names=i,j,k,ex,Run,_,f,s,op
 bad-names=foo,bar,baz,toto,tutu,tata
 
 # List of builtins function names that should not be used, separated by a comma
-bad-functions=map,filter,apply,input
+#bad-functions=map,filter,apply,input
 
 
 # checks for
@@ -247,7 +247,7 @@ max-locals=15
 max-returns=6
 
 # Maximum number of branch for function / method body
-max-branchs=12
+# max-branchs=12
 
 # Maximum number of statements in function / method body
 max-statements=50
