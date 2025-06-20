@@ -30,3 +30,4 @@ TAGS
 *.pem
 misc/docs/.obsidian/
 .venv-poetry
+emulators/exported-data
