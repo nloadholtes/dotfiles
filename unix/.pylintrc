@@ -54,7 +54,7 @@ load-plugins=
 
 # Disable the message(s) with the given id(s).
 #disable-msg=W0704,C0301
-disable=too-few-public-methods,missing-docstring,import-error,unspecified-encoding,redefined-outer-name
+disable=too-few-public-methods,missing-docstring,import-error,unspecified-encoding,redefined-outer-name,W0707,W0511
 
 
 [REPORTS]
