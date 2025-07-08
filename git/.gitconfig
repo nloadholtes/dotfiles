@@ -31,6 +31,7 @@
 	up = "!f() { git pull upstream master && git push origin;}; f"
   start = "!f() { git co -b nloadholtes/${1}; }; f"
   sw = switch
+	wt = "!f() { \n    if [ \"$1\" = \"add\" ]; then \n        shift; \n        git worktree add \"$1\" \"${2:-origin/$1}\"; \n    else \n        git worktree \"$@\"; \n    fi; \n}; f"
 
 [push]
 	default = current
