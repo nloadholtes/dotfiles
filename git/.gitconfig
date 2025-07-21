@@ -8,7 +8,7 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
-  pager = bat -p 
+  pager = bat -p
   #/usr/local/Cellar/git/2.21.0/share/git-core/contrib/diff-highlight/diff-highlight | bat -p
   # less -r
 [alias]
@@ -31,9 +31,7 @@
   up = "!f() { git pull upstream master && git push origin;}; f"
   start = "!f() { git co -b nloadholtes/${1}; }; f"
   sw = switch
-  wt = worktree 
-  wta = "!f() { git worktree add \"$1\" \"${2:-origin/$1}\"; }; f"
-  wtb = "!f() { git worktree add -b \"nloadholtes/$1\" \"nloadholtes/$1\"; }; f"
+  wt = worktree
 
 
 [push]
@@ -56,8 +54,8 @@
   process = git-lfs filter-process
   required = true
 [credential "https://github.com"]
-  helper = 
+  helper =
   helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-  helper = 
+  helper =
   helper = !/usr/bin/gh auth git-credential
