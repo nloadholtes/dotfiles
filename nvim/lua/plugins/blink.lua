@@ -4,8 +4,9 @@ return {
 		keymap = {
 			preset = "none", -- Disable all automatic behavior
 			["<C-space>"] = { "show", "show_documentation" },
-			["<Up>"] = { "select_next", "fallback" },
-			["<Down>"] = { "accept", "fallback" },
+			["<Up>"] = { "select_prev", "fallback" },
+			["<Down>"] = { "select_next", "fallback" },
+			["<CR>"] = { "accept", "fallback" },
 			["<Esc>"] = { "hide", "fallback" },
 		},
 		completion = {
