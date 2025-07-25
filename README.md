@@ -14,3 +14,4 @@ If you are on a mac, this is the command:
 
 `cat vscode/extensions.txt | xargs -L 1 "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --install-extension`
 
+test
