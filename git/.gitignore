@@ -32,3 +32,4 @@ misc/docs/.obsidian/
 .venv-poetry
 emulators/exported-data
 .env.local
+.obsidian/
