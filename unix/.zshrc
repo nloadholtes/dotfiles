@@ -77,7 +77,7 @@ on() {
 title: $title
 date: $date
 tags:
-  - 
+  -
 ---
 
 # $title
@@ -115,3 +115,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Not sure why/what added this, but it is gone now.
 #. "$HOME/.local/bin/env"
+eval "$(direnv hook zsh)"
+
+
