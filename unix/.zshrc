@@ -89,6 +89,12 @@ EOF
     vi "$filename"
 }
 
+# Make a dir and switch into it
+mkcd () {
+  \mkdir -p "$1"
+  cd "$1"
+}
+
 # A great way to clean up docker containers and images that aren't used anymore
 alias dockercleancontainers="docker rm \$(docker ps -a --no-trunc | grep 'Exit' | awk '{print \$1}')"
 alias dockercleanimages='docker rmi $(docker images -f dangling=true -q)'
