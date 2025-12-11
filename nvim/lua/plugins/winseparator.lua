@@ -1,8 +1,14 @@
 return {
 	{
-		"nvim-lua/plenary.nvim", -- any always-loaded plugin works; or use LazyVim core
-		config = function()
-			vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#ff00ff", bold = true })
+		"LazyVim/LazyVim",
+		init = function()
+			-- run after colorscheme applies
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				callback = function()
+					vim.api.nvim_set_hl(0, "VertSplit", { fg = "#ff00ff", bold = true })
+					vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#ff00ff", bold = true })
+				end,
+			})
 		end,
 	},
 }
