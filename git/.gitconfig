@@ -30,6 +30,7 @@
   pr-update = "!fu() { git co master && git fetch ${2:-upstream} pull/$1/head:pr/$1 && git co - && git rebase FETCH_HEAD;}; fu"
   up = "!f() { git pull upstream master && git push origin;}; f"
   start = "!f() { git co -b nloadholtes/${1}; }; f"
+  squash = "!f() { git rebase -i $(git merge-base HEAD master) }"
   sw = switch
   wt = worktree
 
