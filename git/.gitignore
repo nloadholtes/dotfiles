@@ -33,4 +33,4 @@ misc/docs/.obsidian/
 emulators/exported-data
 .env.local
 .obsidian/
-.claude/settings.local.json
+.claude/
