@@ -6,3 +6,7 @@ error_symbol = "[;](bold red)"
 
 [gcloud]
 disabled = true
+
+[git_status]
+stashed = ""
+# untracked = ""
