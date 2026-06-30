@@ -19,6 +19,13 @@ behind = "[⇣($count)](dark-cyan)"
 [git_branch]
 style = "green"
 
+[git_commit]
+disabled = false
+commit_hash_length = 7    # how many chars of the hash to show (default 7)
+only_detached = false     # if true, only shows hash when in detached HEAD state
+tag_disabled = true       # hides the tag name even if HEAD is on a tag
+style = "bold green"
+
 [directory]
 style = "bold white"
 truncation_length = 3
