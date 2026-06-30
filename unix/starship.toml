@@ -9,4 +9,17 @@ disabled = true
 
 [git_status]
 stashed = ""
+style = "bright-cyan"
+modified = "[!($count)](yellow)"
+untracked = "[?($count)](bright-blue)"
+ahead = "[⇡($count)](cyan)"
+behind = "[⇣($count)](dark-cyan)"
 # untracked = ""
+
+[git_branch]
+style = "green"
+
+[directory]
+style = "bold white"
+truncation_length = 3
+truncate_to_repo = true
