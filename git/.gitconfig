@@ -12,28 +12,28 @@
   #/usr/local/Cellar/git/2.21.0/share/git-core/contrib/diff-highlight/diff-highlight | bat -p
   # less -r
 [alias]
-  ci = commit
   al = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
-#log --pretty=oneline --graph --abbrev-commit --decorate
   all = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --all
-#log --pretty=oneline --graph --abbrev-commit --decorate --all
-  st = status
-  out = log origin/master..HEAD
-  co = checkout
   branches = branch -a
-  in = log HEAD..origin/master
+  ci = commit
+  co = checkout
   forgetabout = update-index --assume-unchanged
-  remember = update-index --no-assume-unchanged
-  undo = reset --soft HEAD~1
+  in = log HEAD..origin/master
+  out = log origin/master..HEAD
   pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1;}; f"
   pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
   pr-update = "!fu() { git co master && git fetch ${2:-upstream} pull/$1/head:pr/$1 && git co - && git rebase FETCH_HEAD;}; fu"
-  up = "!f() { git pull upstream master && git push origin;}; f"
-  start = "!f() { git co -b nloadholtes/${1}; }; f"
-  squash = "!f() { git rebase -i $(git merge-base HEAD master); }; f"
-  sw = switch
-  wt = worktree
   pushf = push --force-with-lease
+  remember = update-index --no-assume-unchanged
+  squash = "!f() { git rebase -i $(git merge-base HEAD master); }; f"
+  st = status
+  start = "!f() { git co -b nloadholtes/${1}; }; f"
+  sw = switch
+  undo = reset --soft HEAD~1
+  up = "!f() { git pull upstream master && git push origin;}; f"
+  wt = worktree
+#log --pretty=oneline --graph --abbrev-commit --decorate
+#log --pretty=oneline --graph --abbrev-commit --decorate --all
 
 
 [push]
