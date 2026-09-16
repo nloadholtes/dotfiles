@@ -33,6 +33,7 @@
   squash = "!f() { git rebase -i $(git merge-base HEAD master); }; f"
   sw = switch
   wt = worktree
+  pushf = push --force-with-lease
 
 
 [push]
